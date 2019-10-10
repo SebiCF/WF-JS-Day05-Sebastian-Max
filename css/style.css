@@ -1,101 +1,80 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-}
+  font-family: sans-serif; }
 
 header {
   height: 16vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: black;
-}
-
-header h2 {
-  margin: 15px;
-  color: white;
-}
-
-header div {
-  min-width: 30%;
-  background-color: #ACBDBD;
-  margin: 15px;
-  padding: 15px;
-  text-align: center;
-}
-
-header div h2 {
-  color: #758388;
-}
+  justify-content: space-between;
+  align-items: center;
+  background-color: black; }
+  header h2 {
+    margin: 15px;
+    color: white; }
+  header div {
+    min-width: 30%;
+    background-color: #ACBDBD;
+    margin: 15px;
+    padding: 15px;
+    text-align: center; }
+    header div h2 {
+      color: #758388; }
 
 nav {
   height: 5vh;
-  background-color: #414141;
-}
-
-nav ul a {
-  text-decoration: none;
-}
-
-nav ul a li {
-  margin: 0 10px;
-  list-style: none;
-  font-size: 20pt;
-  color: white;
-}
+  background-color: #414141; }
+  nav ul a {
+    text-decoration: none; }
+    nav ul a li {
+      margin: 0 10px;
+      list-style: none;
+      font-size: 20pt;
+      color: white; }
 
 main > h1 {
   text-align: center;
-  margin-top: 1%;
-}
+  margin-top: 1%; }
 
 #products {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   min-height: 70vh;
-}
+  width: 80%;
+  margin: 0 auto; }
 
 .container {
   width: 26%;
   background-color: #e3e3e3;
-  margin-bottom: 5%;
-}
-
-.container img {
-  width: 90%;
-}
-
-.container div {
-  color: white;
-  font-size: 130%;
-  padding: 3%;
-  background-color: black;
-  text-align: center;
-  font-weight: 600;
-}
+  margin-bottom: 5%; }
+  .container img {
+    width: 90%; }
+  .container div {
+    color: white;
+    font-size: 130%;
+    padding: 3%;
+    background-color: black;
+    text-align: center;
+    font-weight: 600; }
 
 .bigCard {
   width: 100%;
-  height: 10vh;
-  background-color: red;
-}
+  background-color: #e3e3e3;
+  margin-bottom: 5%;
+  padding: 3%; }
+  .bigCard img {
+    float: left;
+    width: 50%; }
+  .bigCard div {
+    text-align: center; }
+  .bigCard p {
+    text-align: right; }
 
 footer {
   height: 10vh;
   text-align: center;
   color: white;
-  background-color: #414141;
-}
+  background-color: #414141; }
+
 /*# sourceMappingURL=style.css.map */
