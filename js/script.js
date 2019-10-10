@@ -1,115 +1,114 @@
+let cars =
 
-let cars = 
+    [{
 
-    [
-    {
+            "name": "Tesla",
 
-        "name": "Tesla",
+            "productionYear": "2000",
 
-        "productionYear": "2000",
+            "image": "./img/tesla.jpg",
 
-        "image": "./img/tesla.jpg",
+            "price": "40000"
 
-        "price": "40000"
+        },
+        {
 
-    },
-    {
+            "name": "Tesla",
 
-        "name": "Tesla",
+            "productionYear": "2000",
 
-        "productionYear": "2000",
+            "image": "./img/tesla.jpg",
 
-        "image": "./img/tesla.jpg",
+            "price": "30000"
 
-        "price": "30000"
+        },
+        {
 
-    },
-    {
+            "name": "Tesla",
 
-        "name": "Tesla",
+            "productionYear": "2000",
 
-        "productionYear": "2000",
+            "image": "./img/tesla.jpg",
 
-        "image": "./img/tesla.jpg",
+            "price": "20000"
 
-        "price": "20000"
+        },
+        {
 
-    },
-    {
+            "name": "Tesla",
 
-        "name": "Tesla",
+            "productionYear": "2000",
 
-        "productionYear": "2000",
+            "image": "./img/tesla.jpg",
 
-        "image": "./img/tesla.jpg",
+            "price": "25000"
 
-        "price": "25000"
+        },
+        {
 
-    },
-    {
+            "name": "Tesla",
 
-        "name": "Tesla",
+            "productionYear": "2000",
 
-        "productionYear": "2000",
+            "image": "./img/tesla.jpg",
 
-        "image": "./img/tesla.jpg",
+            "price": "15000"
 
-        "price": "15000"
+        },
+        {
 
-    },
-    {
+            "name": "Tesla",
 
-        "name": "Tesla",
+            "productionYear": "2000",
 
-        "productionYear": "2000",
+            "image": "./img/tesla.jpg",
 
-        "image": "./img/tesla.jpg",
+            "price": "30000"
 
-        "price": "30000"
+        },
+        {
 
-    },
-    {
+            "name": "Tesla",
 
-        "name": "Tesla",
+            "productionYear": "2000",
 
-        "productionYear": "2000",
+            "image": "./img/tesla.jpg",
 
-        "image": "./img/tesla.jpg",
+            "price": "50000"
 
-        "price": "50000"
+        },
+        {
 
-    },
-    {
+            "name": "Tesla",
 
-        "name": "Tesla",
+            "productionYear": "2000",
 
-        "productionYear": "2000",
+            "image": "./img/tesla.jpg",
 
-        "image": "./img/tesla.jpg",
+            "price": "50000"
 
-        "price": "50000"
+        },
+        {
 
-    },
-    {
+            "name": "Tesla",
 
-        "name": "Tesla",
+            "productionYear": "2000",
 
-        "productionYear": "2000",
+            "image": "./img/tesla.jpg",
 
-        "image": "./img/tesla.jpg",
+            "price": "50000"
 
-        "price": "50000"
+        }
+    ]
 
-    }]
 
-    
 
 createContent();
 
 
-function createContent(){
+function createContent() {
     let products = document.getElementById("products");
-    for (i = 0; i < cars.length; i++){
+    for (i = 0; i < cars.length; i++) {
         let container = document.createElement("div");
         let img = document.createElement("img");
         let description = document.createElement("div");
@@ -120,9 +119,12 @@ function createContent(){
         container.appendChild(img);
         container.appendChild(description);
         products.appendChild(container);
-
+        let eventFunction = function () {
+            createBiggerContent(container.id)
+        }
+        container.addEventListener("click", eventFunction)
     }
-    
+
 
     /*for (let car of cars){
         let container = document.createElement("div");
@@ -138,6 +140,12 @@ function createContent(){
 
 }
 
-function createBiggerContent(){
-
+function createBiggerContent(id) {
+    let insertBefore = Number(id) + 1;
+    insertBefore += (3 - insertBefore % 3);
+    if (document.getElementsByClassName("bigCard")[0] == undefined) {
+        let container = document.createElement("div");
+        container.className = "bigCard";
+        document.getElementById("products").insertBefore(container, document.getElementById(insertBefore));
+    }
 }
