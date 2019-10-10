@@ -150,6 +150,13 @@ function createBiggerContent(id) {
         bigCard[0].parentNode.removeChild(bigCard[0]);
     }
     let container = document.createElement("div");
+    let img = document.createElement("img");
+    let description = document.createElement("div");
+    img.src = cars[id].image;
+    description.innerHTML = `<h2>${cars[id].name}</h2> <br> Production Year: ${cars[id].productionYear} <br> Price: ${cars[id].price} `;
+    container.appendChild(img);
+    container.appendChild(description);
     container.className = "bigCard";
     document.getElementById("products").insertBefore(container, document.getElementById(insertBefore));
+
 }
