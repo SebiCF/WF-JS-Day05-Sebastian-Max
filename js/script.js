@@ -142,10 +142,14 @@ function createContent() {
 
 function createBiggerContent(id) {
     let insertBefore = Number(id) + 1;
-    insertBefore += (3 - insertBefore % 3);
-    if (document.getElementsByClassName("bigCard")[0] == undefined) {
-        let container = document.createElement("div");
-        container.className = "bigCard";
-        document.getElementById("products").insertBefore(container, document.getElementById(insertBefore));
+    if ((insertBefore % 3) != 0) {
+        insertBefore += (3 - insertBefore % 3);
     }
+    let bigCard = document.getElementsByClassName("bigCard");
+    if (bigCard[0] != undefined) {
+        bigCard[0].parentNode.removeChild(bigCard[0]);
+    }
+    let container = document.createElement("div");
+    container.className = "bigCard";
+    document.getElementById("products").insertBefore(container, document.getElementById(insertBefore));
 }
